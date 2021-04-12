@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script> 
+
+/*for this example we are using document.ready jquery object to load all of our Javascript calls.
+remember the window.onload? Well this is jquery's version
+This is so the are "available" at the time of use. There can be event issues that occur if you haven't 
+managed this*/
+
+
+
+/* jQuery syntax:
+$(selectorhere).jQueryObject(function() {
+	your lines of code go here
+});
+*/
+
+
+
+$( document ).ready(function() {
+
+
+    //this jQuery click calls based on a P tag selector
+    //all P tags on this page will perform the same alert 
+
+
+//lets start with jquery click events
+//can be applied universally to a html element
+
+	$("p").click(function() {
+		alert("you have clicked a p tag");
+		//alert(myFirstJSON["name"]);
+		//alert(myFirstJSON.age);
+		//console.log(outsideJSON2["responseJSON"]);
+	});   
+
+//can call based on ID
+
+	//this jQuery click calls on the yellow CSS id selector
+	$("#yellow").click(function() {
+		alert("you have clicked the yellow box");
+		//can do effects
+		$(".green").fadeOut(5000);
+		$(".hideshow").toggle(5000);
+	});
+
+//can call based CSS class selector
+
+	//this jQuery click calls on the blue CSS class selector
+	$(".blue").click(function(){
+		alert("you have clicked the blue box");
+		//can see another event
+		$(".green").fadeIn(5000);
+	});
+
+
+// can do mouseovers 
+// and other events
+//https://api.jquery.com/category/events/mouse-events/
+//just so you can see we will do a mouseover
+$( "#mouseover" ).mouseover(function() {
+  alert('mousedover');
+});
+
+//gets better
+//now let's use jquery UI. You can realy start to see the power
+// add link to it same as jquery library. must also include the css though
+
+
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+
+  /*
+  $( function() {
+  	$( "#accordion" ).accordion();
+  	//want all of the according to start collapsed?
+   // $( "#accordion" ).accordion({ header: "h3", collapsible: true, active: false });
+  } );
+  */
+
+//end of document.ready function
+});  
+
+
+</script>
+
+
+<style> 
+
+#yellow {
+	padding: 5px;
+	text-align: center;
+	background-color: yellow;
+	border: solid 1px;
+}
+
+.blue {
+	padding: 5px;
+	text-align: center;
+	background-color: blue;
+	border: solid 1px;
+}
+
+.green {
+	padding: 5px;
+	text-align: center;
+	background-color: green;
+	border: solid 1px;
+	display: none;
+}
+
+.hideshow {
+	padding: 5px;
+	text-align: center;
+	background-color: purple;
+	border: solid 1px;
+}
+
+#mouseover {
+	border: solid 1px;
+	height: 100px;
+	width: 100px;
+}
+
+
+</style>
+</head>
+<body>
+
+<p>Click me</p>
+
+<p>Also click me</p>
+
+<div id="yellow">This is a yellow box</div>
+<div class="blue">This is a blue box</div>
+<div class="green">I fade</div>
+
+<div class="hideshow">I hide and show</div>
+<div id="mouseover">I have mouseover</div>
+
+
+
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <ul id="states">
+    	<li>Item one</li>
+    	<li>Item 2</li>
+    </ul>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  <h3>Section 4</h3>
+  <div>
+    <p>
+    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+    mauris vel est.
+    </p>
+    <p>
+    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+    inceptos himenaeos.
+    </p>
+  </div>
+</div>
+ 
+
+
+
+
+</body>
+</html>
