@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <title>KLM SHORTS</title>
+
+  	<script>
+
+  		var myFirstVariable = 8;
+
+  		function button1() {
+
+  			html = "<p>Here's a sneak peak at some KLM merchandise:</p><img src='KLMlightblue.jpeg' class='imgSize'>";
+
+  			document.getElementById("content").innerHTML = html;
+
+  		}
+
+
+  		function button2() {
+
+  			html = "<img src='KLMblackshorts.jpeg'>";
+  			
+  			document.getElementById("content").innerHTML = html;
+
+  		}
+
+  		
+
+
+  	</script> 
+
+  	<style>
+  		.assessment {
+  			background: red;
+  		}
+  		#content {
+  			background: grey;
+  		}
+
+  		.imgSize {
+  			width: 50%;
+  			height: 50%;
+  		}
+
+  	</style>
+
+  </head>
+
+  <body>
+
+  	<h1>KLM SHORTS</h1>
+
+  	<button onclick="button1()">Button 1</button>
+  	<button onclick="button2()">Button 2</button>
+  	
+
+  	<div class="Flavors">
+  		<h3>Flavors</h3>
+
+  		<div id="content">
+
+<p>Here's a sneak peak at some KLM merchandise:</p><img src='KLMlightblue.jpeg' class='imgSize'>
+
+  		</div>
+  	</div>
+
+  </body>
+
+ </html>
