@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+
+
+<script>
+function myFunction(param) {
+	value = param
+	console.log(value);
+	images = ['KLMblackshorts.jpeg', 'pinkKLM.jpeg', 'brownKLM.jpeg', 'KLMlightblue.jpeg', 'DarkBlueklm.jpeg'];
+	text = '';
+
+	switch(value) {
+		case 0:
+			text = "Heres a pair of black KLM shorts!";
+			break;
+		case 1: 
+			text = "Pink is perfect to match, especially during this season! ";
+			break;
+		case 2: 
+			text = "Not a doubt these are for you!!";
+			break;
+		case 3: 
+			text = "Always need a light pair because summer is soon to come!";
+			break;
+		case 4:
+			text = "Such a classic color honestly goes with most hats.";
+			break;
+		default:
+			"Such a classic color honestly goes with most hats."
+	}
+
+	document.getElementById("hattext").innerHTML= text;
+	document.getElementById("shorts").src= images[value];
+}
+</script>
+
+</head>
+
+<body>
+
+<div id="main">
+
+	<div id="mainbody">
+		<H1>Find the perfect KLM shorts for you!<br>
+		 (based on what baseball cap you're wearing)</H1>
+
+		<p>The activity matches your cap color to the perfect pair of shorts for you:</p>
+
+		<button class="button" onclick="myFunction(0)">Black Fitted Hat</button><br>
+		<button class="button" onclick="myFunction(1)">Baby Pink Fitted Hat</button><br>
+		<button class="button" onclick="myFunction(2)">Brown Fitted Hat</button><br>
+		<button class="button" onclick="myFunction(3)">Baby Blue or Lavender Fitted Hat</button><br>
+		<button class="button" onclick="myFunction(4)">Dark Green or Blue Fitted Cap</button><br>
+
+	</div>
+
+
+
+	<div id="assessment">
+		<h3>Assessment</h3>
+		<p id="answer"></p>
+		<p id="hattext"></p>
+		<img id="shorts" src="">
+	</div>
+
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+</html>
